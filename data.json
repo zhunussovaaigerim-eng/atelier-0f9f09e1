@@ -1,6 +1,6 @@
 {
  "version": 1,
- "generatedAt": 1795374000000,
+ "generatedAt": 1795375800000,
  "thresholds": {
   "activeMin": 30,
   "sleepHours": 3,
@@ -87,7 +87,7 @@
    "name": "Драмма Куин",
    "zone": "soul",
    "main": false,
-   "lastActive": 1795373400000,
+   "lastActive": 1795374000000,
    "awaiting": false
   },
   {
