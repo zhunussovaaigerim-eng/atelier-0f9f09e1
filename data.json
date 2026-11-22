@@ -1,6 +1,6 @@
 {
  "version": 1,
- "generatedAt": 1795365900000,
+ "generatedAt": 1795366800000,
  "thresholds": {
   "activeMin": 30,
   "sleepHours": 3,
@@ -80,7 +80,7 @@
    "name": "Директор",
    "zone": "boss",
    "main": true,
-   "lastActive": 1795365600000,
+   "lastActive": 1795366200000,
    "awaiting": false
   },
   {
