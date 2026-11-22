@@ -1,6 +1,6 @@
 {
  "version": 1,
- "generatedAt": 1795366800000,
+ "generatedAt": 1795368600000,
  "thresholds": {
   "activeMin": 30,
   "sleepHours": 3,
@@ -80,15 +80,15 @@
    "name": "Директор",
    "zone": "boss",
    "main": true,
-   "lastActive": 1795366200000,
+   "lastActive": 1795366800000,
    "awaiting": false
   },
   {
    "name": "Драмма Куин",
    "zone": "soul",
    "main": false,
-   "lastActive": 1793161200000,
-   "awaiting": false
+   "lastActive": 1795368000000,
+   "awaiting": true
   },
   {
    "name": "Духовный помощник",
