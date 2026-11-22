@@ -1,6 +1,6 @@
 {
  "version": 1,
- "generatedAt": 1795364520000,
+ "generatedAt": 1795365900000,
  "thresholds": {
   "activeMin": 30,
   "sleepHours": 3,
@@ -80,7 +80,7 @@
    "name": "Директор",
    "zone": "boss",
    "main": true,
-   "lastActive": 1795363800000,
+   "lastActive": 1795365600000,
    "awaiting": false
   },
   {
@@ -94,7 +94,7 @@
    "name": "Духовный помощник",
    "zone": "soul",
    "main": false,
-   "lastActive": 1795191600000,
+   "lastActive": 1795365000000,
    "awaiting": false
   },
   {
@@ -108,8 +108,8 @@
    "name": "Комментатор",
    "zone": "content",
    "main": false,
-   "lastActive": 1795355400000,
-   "awaiting": false
+   "lastActive": 1795365000000,
+   "awaiting": true
   },
   {
    "name": "Косметолог-дерматолог",
