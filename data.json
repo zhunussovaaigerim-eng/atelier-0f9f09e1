@@ -1,0 +1,276 @@
+{
+ "version": 1,
+ "generatedAt": 1795364520000,
+ "thresholds": {
+  "activeMin": 30,
+  "sleepHours": 3,
+  "loungeDays": 7
+ },
+ "zones": [
+  {
+   "key": "content",
+   "label": "Студия контента"
+  },
+  {
+   "key": "beauty",
+   "label": "Красота и стиль"
+  },
+  {
+   "key": "study",
+   "label": "Учёба и языки"
+  },
+  {
+   "key": "boss",
+   "label": "Кабинет директора"
+  },
+  {
+   "key": "soul",
+   "label": "Душа и досуг"
+  },
+  {
+   "key": "home",
+   "label": "Семья и дом"
+  },
+  {
+   "key": "health",
+   "label": "Здоровье и спорт"
+  },
+  {
+   "key": "money",
+   "label": "Финансы"
+  }
+ ],
+ "bots": [
+  {
+   "name": "Content Maker",
+   "zone": "content",
+   "main": false,
+   "lastActive": 1795326600000,
+   "awaiting": true
+  },
+  {
+   "name": "SMM Manager",
+   "zone": "content",
+   "main": false,
+   "lastActive": 1795326600000,
+   "awaiting": false
+  },
+  {
+   "name": "UGC Coach",
+   "zone": "content",
+   "main": false,
+   "lastActive": 1795326600000,
+   "awaiting": false
+  },
+  {
+   "name": "Байер",
+   "zone": "beauty",
+   "main": false,
+   "lastActive": 1793872800000,
+   "awaiting": false
+  },
+  {
+   "name": "Делаем отличника",
+   "zone": "study",
+   "main": false,
+   "lastActive": 1795356600000,
+   "awaiting": true
+  },
+  {
+   "name": "Директор",
+   "zone": "boss",
+   "main": true,
+   "lastActive": 1795363800000,
+   "awaiting": false
+  },
+  {
+   "name": "Драмма Куин",
+   "zone": "soul",
+   "main": false,
+   "lastActive": 1793161200000,
+   "awaiting": false
+  },
+  {
+   "name": "Духовный помощник",
+   "zone": "soul",
+   "main": false,
+   "lastActive": 1795191600000,
+   "awaiting": false
+  },
+  {
+   "name": "Календарь",
+   "zone": "home",
+   "main": false,
+   "lastActive": 1795309200000,
+   "awaiting": false
+  },
+  {
+   "name": "Комментатор",
+   "zone": "content",
+   "main": false,
+   "lastActive": 1795355400000,
+   "awaiting": false
+  },
+  {
+   "name": "Косметолог-дерматолог",
+   "zone": "beauty",
+   "main": false,
+   "lastActive": 1795178400000,
+   "awaiting": false
+  },
+  {
+   "name": "Миссис Маршал",
+   "zone": "study",
+   "main": false,
+   "lastActive": 1795342200000,
+   "awaiting": false
+  },
+  {
+   "name": "Нутрициолог",
+   "zone": "health",
+   "main": false,
+   "lastActive": 1795309200000,
+   "awaiting": false
+  },
+  {
+   "name": "Стилист Сейран",
+   "zone": "beauty",
+   "main": false,
+   "lastActive": 1795324800000,
+   "awaiting": false
+  },
+  {
+   "name": "Той-организатор",
+   "zone": "home",
+   "main": false,
+   "lastActive": 1794679800000,
+   "awaiting": false
+  },
+  {
+   "name": "Умью — помощница по дому",
+   "zone": "home",
+   "main": false,
+   "lastActive": 1795348800000,
+   "awaiting": false
+  },
+  {
+   "name": "Финансист грамотный",
+   "zone": "money",
+   "main": false,
+   "lastActive": 1792999200000,
+   "awaiting": false
+  },
+  {
+   "name": "Фитнес-тренер",
+   "zone": "health",
+   "main": false,
+   "lastActive": 1795310400000,
+   "awaiting": false
+  }
+ ],
+ "tables": [
+  {
+   "zone": "content",
+   "members": [
+    "Content Maker",
+    "SMM Manager",
+    "UGC Coach",
+    "Директор"
+   ]
+  },
+  {
+   "zone": "health",
+   "members": [
+    "Директор",
+    "Нутрициолог",
+    "Фитнес-тренер"
+   ]
+  }
+ ],
+ "edges": [
+  {
+   "a": "Content Maker",
+   "b": "SMM Manager",
+   "w7": 30.7,
+   "w30": 142.0
+  },
+  {
+   "a": "Content Maker",
+   "b": "UGC Coach",
+   "w7": 30.7,
+   "w30": 142.0
+  },
+  {
+   "a": "Content Maker",
+   "b": "Директор",
+   "w7": 30.7,
+   "w30": 142.0
+  },
+  {
+   "a": "Content Maker",
+   "b": "Стилист Сейран",
+   "w7": 0.0,
+   "w30": 3.0
+  },
+  {
+   "a": "SMM Manager",
+   "b": "UGC Coach",
+   "w7": 30.7,
+   "w30": 142.0
+  },
+  {
+   "a": "SMM Manager",
+   "b": "Директор",
+   "w7": 30.7,
+   "w30": 142.0
+  },
+  {
+   "a": "UGC Coach",
+   "b": "Директор",
+   "w7": 30.7,
+   "w30": 142.0
+  },
+  {
+   "a": "Делаем отличника",
+   "b": "Директор",
+   "w7": 0.0,
+   "w30": 3.0
+  },
+  {
+   "a": "Делаем отличника",
+   "b": "Календарь",
+   "w7": 0.0,
+   "w30": 2.0
+  },
+  {
+   "a": "Директор",
+   "b": "Косметолог-дерматолог",
+   "w7": 0.0,
+   "w30": 2.0
+  },
+  {
+   "a": "Директор",
+   "b": "Нутрициолог",
+   "w7": 4.0,
+   "w30": 27.5
+  },
+  {
+   "a": "Директор",
+   "b": "Фитнес-тренер",
+   "w7": 4.0,
+   "w30": 27.5
+  },
+  {
+   "a": "Косметолог-дерматолог",
+   "b": "Нутрициолог",
+   "w7": 0.0,
+   "w30": 2.0
+  },
+  {
+   "a": "Нутрициолог",
+   "b": "Фитнес-тренер",
+   "w7": 4.0,
+   "w30": 27.5
+  }
+ ]
+}
