@@ -1,5 +1,6 @@
 import * as THREE from 'three';
 import { CSS2DRenderer, CSS2DObject } from 'three/addons/CSS2DRenderer.js';
+import { mergeGeometries } from 'three/addons/BufferGeometryUtils.js';
 
 // ---------- constants (metres) ----------
 const W = 44, D = 30, X0 = -22, X1 = 22, Z0 = -15, Z1 = 15;
@@ -309,7 +310,7 @@ function teaGlasses(x, y, z, n, r = 0.12) {
   for (let i = 0; i < n; i++) {
     const a = i / n * Math.PI * 2, gx = x + Math.cos(a) * r, gz = z + Math.sin(a) * r;
     const saucer = cyl(0.045, 0.04, 0.008, 0xb3261e, gx, y + 0.004, gz, scene, 16); saucer.castShadow = false;
-    const g = lathe([[0, 0], [0.02, 0], [0.02, 0.005], [0.011, 0.014], [0.019, 0.04], [0.024, 0.06], [0.018, 0.077], [0.022, 0.097], [0.024, 0.1]], 0xb04a17, { roughness: 0.15, metalness: 0.1, transparent: true, opacity: 0.85 });
+    const g = lathe([[0, 0], [0.02, 0], [0.02, 0.005], [0.011, 0.014], [0.019, 0.04], [0.024, 0.06], [0.018, 0.077], [0.022, 0.097], [0.024, 0.1]], 0xb04a17, { roughness: 0.15, metalness: 0.1 });
     g.position.set(gx, y + 0.008, gz); scene.add(g);
   }
 }
@@ -862,13 +863,14 @@ function build(data) {
 
   for (const b of bots) {
     const s = seat[b.name] || { x: 0, z: 0, rot: 0, kind: 'stand' };
-    const obj = makePerson(b); obj.position.set(s.x, 0, s.z); obj.rotation.y = s.rot; scene.add(obj);
+    const obj = makePerson(b); obj.userData.dynamic = true; obj.position.set(s.x, 0, s.z); obj.rotation.y = s.rot; scene.add(obj);
     const st = b.active ? '<span class="st bulb">💡</span>' : '';
     const zz = b.sleeping ? '<span class="zz">Zz</span>' : '';
     const lbl = label(`${st}<span>${esc(b.name)}</span>${zz}`, 'lbl' + (b.main ? ' main' : '') + (b.sleeping ? ' sleep' : ''), obj, 2.05);
     const p = { bot: b, obj, home: s, state: 'seated', path: null, timer: 4 + Math.random() * 18, phase: Math.random() * 10, lbl, stepAcc: 0 };
     people.push(p);
   }
+  mergeStatic();
   // stats
   const act = bots.filter(b => b.active).length, sl = bots.filter(b => b.sleeping && !b.lounge).length;
   document.getElementById('stats').innerHTML =
@@ -876,6 +878,37 @@ function build(data) {
     `<span class="chip">🪑 ${waiting.length} ждут тебя</span><span class="chip">🛋 ${resting.length} на отдыхе</span>`;
   const t = new Date(data.generatedAt).toLocaleString('ru-RU', { timeZone: 'Asia/Almaty', day: 'numeric', month: 'long', hour: '2-digit', minute: '2-digit' });
   document.getElementById('updated').textContent = `Последние изменения: ${t} (Алматы) · 💡 активен ≤30 мин · Zz спит >3 ч`;
+}
+
+// ---------- merge static furniture into a few draw calls (keeps phones cool) ----------
+function mergeStatic() {
+  scene.updateMatrixWorld(true);
+  const groups = new Map();
+  scene.traverse(o => {
+    if (!o.isMesh) return;
+    for (let p = o; p; p = p.parent) if (p.userData.dynamic) return;
+    if (o.material.transparent || Array.isArray(o.material)) return;
+    const key = o.material.uuid + '|' + (o.castShadow ? 1 : 0);
+    if (!groups.has(key)) groups.set(key, { mat: o.material, cast: o.castShadow, list: [] });
+    groups.get(key).list.push(o);
+  });
+  let merged = 0;
+  for (const g of groups.values()) {
+    if (g.list.length < 2) continue;
+    const geos = g.list.map(o => {
+      const gg = o.geometry.index ? o.geometry.toNonIndexed() : o.geometry.clone();
+      for (const k of Object.keys(gg.attributes)) if (!['position', 'normal', 'uv'].includes(k)) gg.deleteAttribute(k);
+      if (!gg.attributes.uv) gg.setAttribute('uv', new THREE.Float32BufferAttribute(new Float32Array(gg.attributes.position.count * 2), 2));
+      gg.morphAttributes = {};
+      return gg.applyMatrix4(o.matrixWorld);
+    });
+    const geo = mergeGeometries(geos, false);
+    if (!geo) continue;
+    const m = new THREE.Mesh(geo, g.mat); m.castShadow = g.cast; m.receiveShadow = true; scene.add(m);
+    for (const o of g.list) o.parent.remove(o);
+    merged += g.list.length;
+  }
+  return merged;
 }
 
 // ---------- behaviour ----------
@@ -990,6 +1023,7 @@ async function start() {
     update(dt, t); soundTick(dt);
     renderer.render(scene, camera); labelRenderer.render(scene, camera);
   });
+  window.__info = () => ({ ...renderer.info.render, geometries: renderer.info.memory.geometries, textures: renderer.info.memory.textures });
   window.__ready = true;
 }
 start();
