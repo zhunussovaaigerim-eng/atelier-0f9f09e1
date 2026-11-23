@@ -1,6 +1,6 @@
 {
  "version": 1,
- "generatedAt": 1795422600000,
+ "generatedAt": 1795433400000,
  "thresholds": {
   "activeMin": 30,
   "sleepHours": 3,
@@ -45,21 +45,21 @@
    "name": "Content Maker",
    "zone": "content",
    "main": false,
-   "lastActive": 1795422000000,
+   "lastActive": 1795426800000,
    "awaiting": true
   },
   {
    "name": "SMM Manager",
    "zone": "content",
    "main": false,
-   "lastActive": 1795422000000,
+   "lastActive": 1795426800000,
    "awaiting": false
   },
   {
    "name": "UGC Coach",
    "zone": "content",
    "main": false,
-   "lastActive": 1795422000000,
+   "lastActive": 1795426800000,
    "awaiting": false
   },
   {
@@ -80,7 +80,7 @@
    "name": "Директор",
    "zone": "boss",
    "main": true,
-   "lastActive": 1795422000000,
+   "lastActive": 1795426800000,
    "awaiting": false
   },
   {
@@ -191,20 +191,20 @@
   {
    "a": "Content Maker",
    "b": "SMM Manager",
-   "w7": 40.3,
-   "w30": 151.7
+   "w7": 41.0,
+   "w30": 152.3
   },
   {
    "a": "Content Maker",
    "b": "UGC Coach",
-   "w7": 40.3,
-   "w30": 151.7
+   "w7": 41.0,
+   "w30": 152.3
   },
   {
    "a": "Content Maker",
    "b": "Директор",
-   "w7": 40.3,
-   "w30": 151.7
+   "w7": 41.0,
+   "w30": 152.3
   },
   {
    "a": "Content Maker",
@@ -215,20 +215,20 @@
   {
    "a": "SMM Manager",
    "b": "UGC Coach",
-   "w7": 40.3,
-   "w30": 151.7
+   "w7": 41.0,
+   "w30": 152.3
   },
   {
    "a": "SMM Manager",
    "b": "Директор",
-   "w7": 40.3,
-   "w30": 151.7
+   "w7": 41.0,
+   "w30": 152.3
   },
   {
    "a": "UGC Coach",
    "b": "Директор",
-   "w7": 40.3,
-   "w30": 151.7
+   "w7": 41.0,
+   "w30": 152.3
   },
   {
    "a": "Делаем отличника",
