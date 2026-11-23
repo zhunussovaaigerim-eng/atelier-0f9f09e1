@@ -1,6 +1,6 @@
 {
  "version": 1,
- "generatedAt": 1795453200000,
+ "generatedAt": 1795455000000,
  "thresholds": {
   "activeMin": 30,
   "sleepHours": 3,
@@ -73,7 +73,7 @@
    "name": "Делаем отличника",
    "zone": "study",
    "main": false,
-   "lastActive": 1795452000000,
+   "lastActive": 1795453800000,
    "awaiting": true
   },
   {
@@ -87,7 +87,7 @@
    "name": "Драмма Куин",
    "zone": "soul",
    "main": false,
-   "lastActive": 1795443600000,
+   "lastActive": 1795454400000,
    "awaiting": false
   },
   {
