@@ -1,6 +1,6 @@
 {
  "version": 1,
- "generatedAt": 1795527180000,
+ "generatedAt": 1795537800000,
  "thresholds": {
   "activeMin": 30,
   "sleepHours": 3,
@@ -87,8 +87,8 @@
    "name": "Драмма Куин",
    "zone": "soul",
    "main": false,
-   "lastActive": 1795455000000,
-   "awaiting": false
+   "lastActive": 1795530600000,
+   "awaiting": true
   },
   {
    "name": "Духовный помощник",
@@ -210,7 +210,7 @@
    "a": "Content Maker",
    "b": "Стилист Сейран",
    "w7": 0.0,
-   "w30": 3.0
+   "w30": 1.0
   },
   {
    "a": "SMM Manager",
