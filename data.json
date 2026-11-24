@@ -1,6 +1,6 @@
 {
  "version": 1,
- "generatedAt": 1795455000000,
+ "generatedAt": 1795510800000,
  "thresholds": {
   "activeMin": 30,
   "sleepHours": 3,
@@ -45,21 +45,21 @@
    "name": "Content Maker",
    "zone": "content",
    "main": false,
-   "lastActive": 1795437600000,
+   "lastActive": 1795510200000,
    "awaiting": true
   },
   {
    "name": "SMM Manager",
    "zone": "content",
    "main": false,
-   "lastActive": 1795437600000,
+   "lastActive": 1795510200000,
    "awaiting": false
   },
   {
    "name": "UGC Coach",
    "zone": "content",
    "main": false,
-   "lastActive": 1795437600000,
+   "lastActive": 1795510200000,
    "awaiting": false
   },
   {
@@ -73,21 +73,21 @@
    "name": "Делаем отличника",
    "zone": "study",
    "main": false,
-   "lastActive": 1795453800000,
-   "awaiting": true
+   "lastActive": 1795494000000,
+   "awaiting": false
   },
   {
    "name": "Директор",
    "zone": "boss",
    "main": true,
-   "lastActive": 1795437600000,
+   "lastActive": 1795510200000,
    "awaiting": false
   },
   {
    "name": "Драмма Куин",
    "zone": "soul",
    "main": false,
-   "lastActive": 1795454400000,
+   "lastActive": 1795455000000,
    "awaiting": false
   },
   {
@@ -101,8 +101,8 @@
    "name": "Календарь",
    "zone": "home",
    "main": false,
-   "lastActive": 1795395600000,
-   "awaiting": false
+   "lastActive": 1795495200000,
+   "awaiting": true
   },
   {
    "name": "Комментатор",
@@ -129,7 +129,7 @@
    "name": "Нутрициолог",
    "zone": "health",
    "main": false,
-   "lastActive": 1795395600000,
+   "lastActive": 1795482600000,
    "awaiting": false
   },
   {
@@ -164,7 +164,7 @@
    "name": "Фитнес-тренер",
    "zone": "health",
    "main": false,
-   "lastActive": 1795396200000,
+   "lastActive": 1795483200000,
    "awaiting": false
   }
  ],
@@ -191,20 +191,20 @@
   {
    "a": "Content Maker",
    "b": "SMM Manager",
-   "w7": 45.0,
-   "w30": 156.3
+   "w7": 47.3,
+   "w30": 155.7
   },
   {
    "a": "Content Maker",
    "b": "UGC Coach",
-   "w7": 45.0,
-   "w30": 156.3
+   "w7": 47.3,
+   "w30": 155.7
   },
   {
    "a": "Content Maker",
    "b": "Директор",
-   "w7": 45.0,
-   "w30": 156.3
+   "w7": 47.3,
+   "w30": 155.7
   },
   {
    "a": "Content Maker",
@@ -215,20 +215,20 @@
   {
    "a": "SMM Manager",
    "b": "UGC Coach",
-   "w7": 45.0,
-   "w30": 156.3
+   "w7": 47.3,
+   "w30": 155.7
   },
   {
    "a": "SMM Manager",
    "b": "Директор",
-   "w7": 45.0,
-   "w30": 156.3
+   "w7": 47.3,
+   "w30": 155.7
   },
   {
    "a": "UGC Coach",
    "b": "Директор",
-   "w7": 45.0,
-   "w30": 156.3
+   "w7": 47.3,
+   "w30": 155.7
   },
   {
    "a": "Делаем отличника",
@@ -252,13 +252,13 @@
    "a": "Директор",
    "b": "Нутрициолог",
    "w7": 4.5,
-   "w30": 25.0
+   "w30": 24.0
   },
   {
    "a": "Директор",
    "b": "Фитнес-тренер",
    "w7": 4.5,
-   "w30": 25.0
+   "w30": 24.0
   },
   {
    "a": "Косметолог-дерматолог",
@@ -270,7 +270,7 @@
    "a": "Нутрициолог",
    "b": "Фитнес-тренер",
    "w7": 4.5,
-   "w30": 25.0
+   "w30": 24.0
   }
  ]
 }
