@@ -1,6 +1,6 @@
 {
  "version": 1,
- "generatedAt": 1795624200000,
+ "generatedAt": 1795766400000,
  "thresholds": {
   "activeMin": 30,
   "sleepHours": 3,
@@ -45,21 +45,21 @@
    "name": "Content Maker",
    "zone": "content",
    "main": false,
-   "lastActive": 1795621200000,
+   "lastActive": 1795689000000,
    "awaiting": true
   },
   {
    "name": "SMM Manager",
    "zone": "content",
    "main": false,
-   "lastActive": 1795621200000,
+   "lastActive": 1795689000000,
    "awaiting": false
   },
   {
    "name": "UGC Coach",
    "zone": "content",
    "main": false,
-   "lastActive": 1795621200000,
+   "lastActive": 1795689000000,
    "awaiting": false
   },
   {
@@ -73,14 +73,14 @@
    "name": "Делаем отличника",
    "zone": "study",
    "main": false,
-   "lastActive": 1795617600000,
+   "lastActive": 1795666200000,
    "awaiting": false
   },
   {
    "name": "Директор",
    "zone": "boss",
    "main": true,
-   "lastActive": 1795621200000,
+   "lastActive": 1795689000000,
    "awaiting": false
   },
   {
@@ -101,7 +101,7 @@
    "name": "Календарь",
    "zone": "home",
    "main": false,
-   "lastActive": 1795599600000,
+   "lastActive": 1795654800000,
    "awaiting": false
   },
   {
@@ -129,7 +129,7 @@
    "name": "Нутрициолог",
    "zone": "health",
    "main": false,
-   "lastActive": 1795569000000,
+   "lastActive": 1795654800000,
    "awaiting": false
   },
   {
@@ -164,7 +164,7 @@
    "name": "Фитнес-тренер",
    "zone": "health",
    "main": false,
-   "lastActive": 1795569600000,
+   "lastActive": 1795656000000,
    "awaiting": false
   }
  ],
@@ -191,74 +191,62 @@
   {
    "a": "Content Maker",
    "b": "SMM Manager",
-   "w7": 49.7,
-   "w30": 153.7
+   "w7": 53.7,
+   "w30": 150.3
   },
   {
    "a": "Content Maker",
    "b": "UGC Coach",
-   "w7": 49.7,
-   "w30": 153.7
+   "w7": 53.7,
+   "w30": 150.3
   },
   {
    "a": "Content Maker",
    "b": "Директор",
-   "w7": 49.7,
-   "w30": 153.7
-  },
-  {
-   "a": "Content Maker",
-   "b": "Стилист Сейран",
-   "w7": 0.0,
-   "w30": 1.0
+   "w7": 53.7,
+   "w30": 150.3
   },
   {
    "a": "SMM Manager",
    "b": "UGC Coach",
-   "w7": 49.7,
-   "w30": 153.7
+   "w7": 53.7,
+   "w30": 150.3
   },
   {
    "a": "SMM Manager",
    "b": "Директор",
-   "w7": 49.7,
-   "w30": 153.7
+   "w7": 53.7,
+   "w30": 150.3
   },
   {
    "a": "UGC Coach",
    "b": "Директор",
-   "w7": 49.7,
-   "w30": 153.7
+   "w7": 53.7,
+   "w30": 150.3
   },
   {
    "a": "Делаем отличника",
    "b": "Директор",
-   "w7": 0.0,
-   "w30": 3.0
-  },
-  {
-   "a": "Делаем отличника",
-   "b": "Календарь",
    "w7": 0.0,
    "w30": 2.0
   },
   {
    "a": "Директор",
    "b": "Нутрициолог",
-   "w7": 4.5,
-   "w30": 24.0
+   "w7": 3.5,
+   "w30": 22.0
   },
   {
    "a": "Директор",
    "b": "Фитнес-тренер",
-   "w7": 4.5,
-   "w30": 24.0
+   "w7": 3.5,
+   "w30": 22.0
   },
   {
    "a": "Нутрициолог",
    "b": "Фитнес-тренер",
-   "w7": 4.5,
-   "w30": 24.0
+   "w7": 3.5,
+   "w30": 22.0
   }
  ]
 }
